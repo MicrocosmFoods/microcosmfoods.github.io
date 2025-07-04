@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import Hero from "../components/Hero.astro";
 import Section from "../components/Section.astro";
+import Navigation from "../components/Navigation.astro";
 ---
 
 <html lang="en">
@@ -12,7 +13,7 @@ import Section from "../components/Section.astro";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width" />
@@ -21,21 +22,27 @@ import Section from "../components/Section.astro";
     <meta
       name="description"
       property="og:description"
-      content="Simple Astro Landing Page Theme is... just that, a simple FREE, CUSTOMIZABLE, and PRODUCCTION-READY, Landing Page Theme build with Astro and Tailwind CSS."
+      content="Microcosm Foods landing page."
     />
-    <title>Simple Astro Landing Page Theme | KuroShi Tec</title>
+    <title>Microcosm Foods </title>
   </head>
-  <body>
+  <body class="pt-16">
+    <Navigation />
     <header class="landing-header">
-      <Hero
-        title="Simple Astro Landing Page Theme"
-        text="Simple Astro Landing Page Theme is... just that, a simple FREE, CUSTOMIZABLE, and PRODUCCTION-READY, Landing Page Theme build with Astro and Tailwind CSS."
-        imgSrc="img/img_00.jpg"
-      />
+      <Hero imgSrc="img/header-banner.png">
+        <h1
+          class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-chivo text-black tracking-tight leading-tight"
+          style="line-height: 1;"
+        >
+          Making the benefits of <br/>
+          fermentation accessible to all.
+        </h1>
+      </Hero>
     </header>
     <main>
       <Section
-        title="Section 1"
+        id="science"
+        title="Science"
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis similique voluptatum corrupti dolore, assumenda sapiente unde consectetur, magni laboriosam deserunt nisi, cupiditate sunt quam fuga omnis sed nulla. Soluta, quam."
         imagePosition="right"
         imgSrc="/img/img_01.jpg"
@@ -43,7 +50,8 @@ import Section from "../components/Section.astro";
       />
 
       <Section
-        title="Section 2"
+        id="learn"
+        title="Learn"
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis similique voluptatum corrupti dolore, assumenda sapiente unde consectetur, magni laboriosam deserunt nisi, cupiditate sunt quam fuga omnis sed nulla. Soluta, quam."
         imagePosition="left"
         imgSrc="img/img_01.jpg"
@@ -51,17 +59,34 @@ import Section from "../components/Section.astro";
       />
 
       <Section
-        title="Section 3"
+        id="team"
+        title="Team"
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis similique voluptatum corrupti dolore, assumenda sapiente unde consectetur, magni laboriosam deserunt nisi, cupiditate sunt quam fuga omnis sed nulla. Soluta, quam."
         imagePosition="right"
         imgSrc="img/img_01.jpg"
         imgAlt="Img Alt"
       />
+
+      <Section
+        id="contact"
+        title="Contact"
+        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis similique voluptatum corrupti dolore, assumenda sapiente unde consectetur, magni laboriosam deserunt nisi, cupiditate sunt quam fuga omnis sed nulla. Soluta, quam."
+        imagePosition="left"
+        imgSrc="img/img_01.jpg"
+        imgAlt="Img Alt"
+      />
+
+      <!-- Support Section -->
+      <section id="support" class="w-full flex flex-col items-center py-12 bg-[#F6F4EA]">
+        <h2 class="text-xl font-bold font-chivo mb-4 text-gray-800">Support</h2>
+        <div class="flex items-center justify-center">
+          <img src="/img/AsteraLogo.png" alt="Astera Institute Logo" class="h-16 w-auto" />
+        </div>
+      </section>
     </main>
   </body>
   <Footer
-    title="Simple Astro Landing Page Theme"
-    address="Example Address, 6 - Somewhere in the world (99999), Spain"
-    text="A simple Landing Page built with Astro, TailwindCSS and TypeScript."
+    title="Microcosm Foods"
+    text="Making the benefits of fermentation accessible to all."
   />
 </html>

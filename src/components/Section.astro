@@ -1,8 +1,8 @@
 ---
-const { title, text, imgSrc, imgAlt, imagePosition } = Astro.props;
+const { id, title, text, imgSrc, imgAlt, imagePosition } = Astro.props;
 ---
 
-<section class="px-4 py-8 antialiased bg-gray-900 md:py-16">
+<section id={id} class="px-4 py-8 antialiased bg-[#F6F4EA] md:py-16">
   <div
     class="mx-auto grid max-w-screen-xl rounded-lg p-4 bg-gray-800 md:p-8 lg:grid-cols-12 lg:gap-8 lg:p-16 xl:gap-16"
   >
