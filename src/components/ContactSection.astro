@@ -29,13 +29,20 @@
 
     <!-- Substack Subscribe Widget -->
     <div>
-      <h2 class="text-3xl font-bold font-chivo text-[#3C4228] mb-8">Or, hear from us</h2>
-      <p class="mb-6 text-[#3C4228] font-chivo">Sign up for our newsletter to hear project and company updates from Microcosm Foods.</p>
-      <form action="https://microcosmfoods.substack.com/subscribe" method="post" target="_blank" class="space-y-4 bg-white p-6 rounded shadow-md">
-        <label for="substack-email" class="block text-sm font-chivo text-[#3C4228] mb-1 uppercase tracking-wide">Email</label>
-        <input id="substack-email" name="email" type="email" required placeholder="e.g. eliemetchnikoff@email.com" class="w-full px-4 py-3 border border-[#3C4228] rounded font-chivo bg-white text-[#3C4228] focus:outline-none focus:ring-2 focus:ring-[#BEC559]" />
-        <button type="submit" class="bg-[#FFAC4D] hover:bg-[#FD966C] text-[#3C4228] font-chivo font-bold px-8 py-3 rounded shadow transition-colors w-full">Sign up</button>
-      </form>
+      <div class="bg-white p-6 rounded shadow-md" style="border: 1px solid #BEC559;">
+        <h2 class="text-3xl font-bold font-chivo text-[#3C4228] mb-4">Or, hear from us</h2>
+        <p class="mb-4 text-[#3C4228] font-chivo">
+          Sign up for our newsletter to hear project and company updates from Microcosm Foods.
+        </p>
+        <iframe
+          src="https://microcosmfoods.substack.com/embed"
+          width="100%"
+          height="180"
+          style="border:0; background:white;"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
     </div>
   </div>
 </section> 
