@@ -1,0 +1,63 @@
+---
+const { id, title } = Astro.props;
+---
+
+<section id={id} class="px-4 py-8 antialiased bg-[#F6F4EA] md:py-16 h-[700px] flex items-center">
+  <div class="mx-auto max-w-screen-xl w-full">
+    <h2 class="text-4xl font-bold font-chivo text-gray-800 mb-12 text-center">{title}</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Data Pane (Red) -->
+      <div class="bg-[#FD966C] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-[#FD966C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold font-chivo text-white mb-3">Data</h3>
+          <p class="text-white mb-4 font-chivo">Explore our research data and findings on fermentation processes and outcomes.</p>
+          <a href="https://zenodo.org/communities/microcosmfoods/records?q=&l=list&p=1&s=10&sort=newest" class="inline-block bg-white text-[#FD966C] px-6 py-2 rounded-lg font-chivo hover:bg-orange-100 transition-colors">
+            View Data
+          </a>
+        </div>
+      </div>
+
+      <!-- Workflows Pane (Light Dark Green) -->
+      <div class="bg-[#BEC559] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-[#BEC559]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold font-chivo text-white mb-3">Workflows</h3>
+          <p class="text-white mb-4 font-chivo">Learn about our fermentation workflows and methodologies.</p>
+          <a href="https://github.com/MicrocosmFoods" class="inline-block bg-white text-[#BEC559] px-6 py-2 rounded-lg font-chivo hover:bg-green-100 transition-colors">
+            View Workflows
+          </a>
+        </div>
+      </div>
+
+      <!-- Blog Pane (Blue) -->
+      <div class="bg-[#7394E9] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <!-- Paper/Literature Icon -->
+            <svg class="w-8 h-8 text-[#7394E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <rect x="4" y="4" width="16" height="16" rx="2" stroke-width="2"/>
+              <line x1="8" y1="8" x2="16" y2="8" stroke-width="2"/>
+              <line x1="8" y1="12" x2="16" y2="12" stroke-width="2"/>
+              <line x1="8" y1="16" x2="12" y2="16" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold font-chivo text-white mb-3">Blog</h3>
+          <p class="text-white mb-4 font-chivo">Stay updated with our latest research and insights on fermentation science.</p>
+          <a href="https://substack.com/" target="_blank" rel="noopener" class="inline-block bg-white text-[#7394E9] px-6 py-2 rounded-lg font-chivo hover:bg-blue-100 transition-colors">
+            Read Blog
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 

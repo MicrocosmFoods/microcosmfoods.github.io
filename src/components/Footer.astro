@@ -1,12 +1,16 @@
 ---
 const currentYear = new Date().getFullYear();
 ---
-<footer class="bg-[#E1E5A8] py-8 px-4">
+<footer class="bg-[#E1E5A8] py-6 px-4">
   <div class="max-w-screen-xl mx-auto flex flex-col gap-4">
     <div class="flex flex-row items-center justify-between w-full">
-      <!-- Logo Bottom Left -->
-      <div class="flex-shrink-0 flex items-center">
+      <!-- Logo and Support Section Bottom Left -->
+      <div class="flex flex-row items-center gap-6">
         <img src="/favicon.svg" alt="Microcosm Foods Logo" class="h-10 w-10" />
+        <div class="flex flex-row items-center">
+          <p class="text-sm text-gray-700 font-chivo mr-3">Supported by:</p>
+          <img src="/img/AsteraLogo.png" alt="Astera Institute Logo" class="h-10 w-auto" />
+        </div>
       </div>
       <!-- Social Icons Bottom Right -->
       <div class="flex gap-4 justify-end bg-[#F6F4EA] rounded-full px-6 py-3">
@@ -24,9 +28,11 @@ const currentYear = new Date().getFullYear();
         </a>
       </div>
     </div>
-    <!-- Copyright -->
-    <div class="text-sm text-gray-700 font-chivo mt-4 text-center w-full">
-      © 2025 Microcosm Foods
+    <!-- Copyright and Privacy Policy -->
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-gray-700 font-chivo">
+      <span>© 2025 Microcosm Foods</span>
+      <span class="hidden md:inline">•</span>
+      <a href="/privacy" class="hover:underline">Privacy Policy</a>
     </div>
   </div>
 </footer>

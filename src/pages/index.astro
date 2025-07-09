@@ -4,6 +4,10 @@ import Footer from "../components/Footer.astro";
 import Hero from "../components/Hero.astro";
 import Section from "../components/Section.astro";
 import Navigation from "../components/Navigation.astro";
+import ScienceSection from "../components/ScienceSection.astro";
+import LearnSection from "../components/LearnSection.astro";
+import TeamSection from "../components/TeamSection.astro";
+import ContactSection from "../components/ContactSection.astro";
 ---
 
 <html lang="en">
@@ -22,11 +26,12 @@ import Navigation from "../components/Navigation.astro";
     <meta
       name="description"
       property="og:description"
-      content="Microcosm Foods landing page."
+      content="Microcosm Foods"
     />
     <title>Microcosm Foods </title>
   </head>
   <body class="pt-16">
+    <div id="top"></div>
     <Navigation />
     <header class="landing-header">
       <Hero imgSrc="img/header-banner.png">
@@ -40,16 +45,14 @@ import Navigation from "../components/Navigation.astro";
       </Hero>
     </header>
     <main>
-      <Section
+      <ScienceSection
         id="science"
         title="Science"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis similique voluptatum corrupti dolore, assumenda sapiente unde consectetur, magni laboriosam deserunt nisi, cupiditate sunt quam fuga omnis sed nulla. Soluta, quam."
-        imagePosition="right"
-        imgSrc="/img/img_01.jpg"
-        imgAlt="Img Alt"
+        text="Connecting fermented foods, microbes, and their metabolites to health benefits while producing public goods."
+        imgSrc="/img/science.svg"
       />
 
-      <Section
+      <LearnSection
         id="learn"
         title="Learn"
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis similique voluptatum corrupti dolore, assumenda sapiente unde consectetur, magni laboriosam deserunt nisi, cupiditate sunt quam fuga omnis sed nulla. Soluta, quam."
@@ -58,7 +61,7 @@ import Navigation from "../components/Navigation.astro";
         imgAlt="Img Alt"
       />
 
-      <Section
+      <TeamSection
         id="team"
         title="Team"
         text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis similique voluptatum corrupti dolore, assumenda sapiente unde consectetur, magni laboriosam deserunt nisi, cupiditate sunt quam fuga omnis sed nulla. Soluta, quam."
@@ -67,22 +70,7 @@ import Navigation from "../components/Navigation.astro";
         imgAlt="Img Alt"
       />
 
-      <Section
-        id="contact"
-        title="Contact"
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis similique voluptatum corrupti dolore, assumenda sapiente unde consectetur, magni laboriosam deserunt nisi, cupiditate sunt quam fuga omnis sed nulla. Soluta, quam."
-        imagePosition="left"
-        imgSrc="img/img_01.jpg"
-        imgAlt="Img Alt"
-      />
-
-      <!-- Support Section -->
-      <section id="support" class="w-full flex flex-col items-center py-12 bg-[#F6F4EA]">
-        <h2 class="text-xl font-bold font-chivo mb-4 text-gray-800">Support</h2>
-        <div class="flex items-center justify-center">
-          <img src="/img/AsteraLogo.png" alt="Astera Institute Logo" class="h-16 w-auto" />
-        </div>
-      </section>
+      <ContactSection />
     </main>
   </body>
   <Footer
