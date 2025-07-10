@@ -6,6 +6,36 @@ const { id, title } = Astro.props;
   <div class="mx-auto max-w-screen-xl w-full">
     <h2 class="text-4xl font-bold font-chivo text-gray-800 mb-12 text-center">{title}</h2>
     
+    <!-- Content Blurbs -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+      <!-- What We're Learning -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-2xl font-bold font-chivo text-gray-800 mb-4">What We're Learning</h3>
+          <p class="text-lg font-chivo text-gray-800 mb-4 italic">
+            Science is revealing just how powerful these foods can be
+          </p>
+          <p class="text-gray-700 font-chivo leading-relaxed">
+            We study the microbial communities inside fermented foods and how they interact with the human body. Our research is focused on mapping the connections between microbes, metabolites, and human biology—and uncover their impact on inflammation, digestion, and beyond.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Sharing What We Know -->
+      <div class="space-y-6">
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="text-2xl font-bold font-chivo text-gray-800 mb-4">Sharing What We Know</h3>
+          <p class="text-lg font-chivo text-gray-800 mb-4 italic">
+            Bringing fermentation science to more people
+          </p>
+          <p class="text-gray-700 font-chivo leading-relaxed">
+            We believe knowledge should be as accessible as food. Through public talks, creative storytelling, and collaborations with chefs, educators, and journalists, we're making the science of fermentation easier to understand—and more exciting to explore.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Three Cards -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Data Pane -->
       <div class="bg-[#E1E5A8] rounded-lg p-4 sm:p-6 shadow-sm hover:shadow-md transition-shadow">
@@ -23,7 +53,7 @@ const { id, title } = Astro.props;
         </div>
       </div>
 
-      <!-- Tools Pane (Light Dark Green) -->
+      <!-- Tools Pane -->
       <div class="bg-[#DDB9F9] rounded-lg p-4 sm:p-6 shadow-sm hover:shadow-md transition-shadow">
         <div class="text-center">
           <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
@@ -43,7 +73,6 @@ const { id, title } = Astro.props;
       <div class="bg-[#FFAC4D] rounded-lg p-4 sm:p-6 shadow-sm hover:shadow-md transition-shadow">
         <div class="text-center">
           <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
-            <!-- Paper/Literature Icon -->
             <svg class="w-8 h-8 text-[#7394E9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <rect x="4" y="4" width="16" height="16" rx="2" stroke-width="2"/>
               <line x1="8" y1="8" x2="16" y2="8" stroke-width="2"/>

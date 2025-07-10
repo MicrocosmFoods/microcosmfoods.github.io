@@ -1,0 +1,49 @@
+---
+const { id, title, text, imgSrc } = Astro.props;
+---
+
+<section
+  id={id}
+  class="bg-[#F6F4EA] px-4 py-8 md:py-16 min-h-[60vh] md:min-h-[700px] h-auto flex items-center"
+>
+  <div class="mx-auto max-w-screen-xl w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+      <!-- Left side - Figure and connecting text -->
+      <div class="order-2 lg:order-1 space-y-6">
+        <p class="text-2xl md:text-3xl text-gray-800 font-chivo leading-relaxed">
+          Connecting fermented foods, microbes, and their metabolites to health benefits.
+        </p>
+        <img 
+          src={imgSrc} 
+          alt="Science illustration" 
+          class="w-full h-auto max-w-2xl mx-auto"
+        />
+      </div>
+      
+      <!-- Right side - Content -->
+      <div class="order-1 lg:order-2 space-y-8">
+        <!-- Mission -->
+        <div class="space-y-4">
+          <h2 class="text-3xl font-bold font-chivo text-gray-800">Our Mission</h2>
+          <p class="text-xl font-chivo text-gray-800 mb-4 italic">
+            Making the benefits of fermentation accessible to all
+          </p>
+          <p class="text-gray-700 font-chivo leading-relaxed">
+            We're bridging ancient traditions and modern science to unlock the health potential of fermented foods—through research, education, and product innovation.
+          </p>
+        </div>
+        
+        <!-- Why Fermentation Matters -->
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold font-chivo text-gray-800">Why Fermentation Matters</h3>
+          <p class="text-lg font-chivo text-gray-800 mb-4 italic">
+            Microbes have always been part of our food—and our biology
+          </p>
+          <p class="text-gray-700 font-chivo leading-relaxed">
+            Fermented foods aren't just preserved—they're transformed. Microbes reshape ingredients into more flavorful, digestible, and nutrient-rich forms. These microbial ecosystems, found in everything from kimchi to cheese, also produce compounds that support gut and immune health.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
