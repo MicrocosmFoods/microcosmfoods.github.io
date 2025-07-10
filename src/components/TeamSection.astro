@@ -2,69 +2,110 @@
 const { id, title } = Astro.props;
 ---
 
-<section id={id} class="px-4 py-8 antialiased bg-[#F6F4EA] md:py-16 h-[900px] flex items-center">
+<section id={id} class="px-4 py-8 antialiased bg-[#F6F4EA] md:py-16 min-h-screen flex items-center">
   <div class="mx-auto max-w-screen-xl w-full">
     <h2 class="text-4xl font-bold font-chivo text-gray-800 mb-12 text-center">{title}</h2>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <!-- Rachel Dutton -->
-      <div class="bg-[#3C4228] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow h-64">
-        <div class="flex items-start h-full">
-          <div class="flex-shrink-0 mr-6">
+      <div class="bg-[#3C4228] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow h-auto min-h-[18rem]">
+        <div class="flex flex-col sm:flex-row items-center sm:items-start h-full">
+          <div class="flex-shrink-0 mr-0 sm:mr-6 flex flex-col items-center mb-4 sm:mb-0">
             <img src="/img/headshots/rachel-dutton.png" alt="Rachel Dutton" class="w-32 h-32 rounded-full object-cover" />
+            <div class="flex gap-2 mt-3">
+              <a href="mailto:rachel@microcosmfoods.com" target="_blank" rel="noopener" aria-label="Email" class="flex items-center justify-center h-8 w-8 rounded-full bg-white text-[#3C4228] hover:bg-[#E1E5A8] transition">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+              </a>
+              <a href="https://x.com/racheljdutton" target="_blank" rel="noopener" aria-label="X" class="flex items-center justify-center h-8 w-8 rounded-full bg-white text-[#3C4228] hover:bg-[#E1E5A8] transition">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.53 6.47a.75.75 0 0 0-1.06 0L12 10.94 7.53 6.47A.75.75 0 1 0 6.47 7.53L10.94 12l-4.47 4.47a.75.75 0 1 0 1.06 1.06L12 13.06l4.47 4.47a.75.75 0 1 0 1.06-1.06L13.06 12l4.47-4.47a.75.75 0 0 0 0-1.06z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/radutton/" target="_blank" rel="noopener" aria-label="LinkedIn" class="flex items-center justify-center h-8 w-8 rounded-full bg-white text-[#3C4228] hover:bg-[#E1E5A8] transition">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.37-1.54 2.82-1.54 3.01 0 3.57 1.98 3.57 4.56v5.62zm0 0"/></svg>
+              </a>
+            </div>
           </div>
-          <div class="flex-1">
+          <div class="flex-1 text-center sm:text-left">
             <h3 class="text-2xl font-bold font-chivo text-white mb-3">Rachel Dutton</h3>
-            <p class="text-gray-300 font-chivo text-sm mb-4">Founder</p>
-            <p class="text-gray-200 font-chivo text-sm leading-relaxed">
-              Brief bio or description of their work and expertise in fermentation science.
+            <p class="text-gray-300 font-chivo text-sm mb-4"><span class="italic font-normal">Founder</span></p>
+            <p class="text-gray-200 font-chivo text-xs leading-relaxed">
+                Rachel is a leading researcher in fermented food microbiomes. After earning her PhD at Harvard Medical School, she led academic labs at Harvard and UC San Diego. Rachel was a Packard Fellow, Pew Scholar, and recipient of the NIH Director's New Innovator Award, and her work has been featured on Netflix and the NY Times. She was a founding scientist at Arcadia Science, and is now a Resident at the Astera Institute.
             </p>
           </div>
         </div>
       </div>
-
       <!-- Chantle Swichkow -->
-      <div class="bg-[#3C4228] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow h-64">
-        <div class="flex items-start h-full">
-          <div class="flex-shrink-0 mr-6">
+      <div class="bg-[#3C4228] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow h-auto min-h-[18rem]">
+        <div class="flex flex-col sm:flex-row items-center sm:items-start h-full">
+          <div class="flex-shrink-0 mr-0 sm:mr-6 flex flex-col items-center mb-4 sm:mb-0">
             <img src="/img/headshots/chantle-swichkow.png" alt="Chantle Swichkow" class="w-32 h-32 rounded-full object-cover" />
+            <div class="flex gap-2 mt-3">
+              <a href="mailto:chantle@microcosmfoods.com" target="_blank" rel="noopener" aria-label="Email" class="flex items-center justify-center h-8 w-8 rounded-full bg-white text-[#3C4228] hover:bg-[#E1E5A8] transition">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+              </a>
+              <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X" class="flex items-center justify-center h-8 w-8 rounded-full bg-white text-[#3C4228] hover:bg-[#E1E5A8] transition">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.53 6.47a.75.75 0 0 0-1.06 0L12 10.94 7.53 6.47A.75.75 0 1 0 6.47 7.53L10.94 12l-4.47 4.47a.75.75 0 1 0 1.06 1.06L12 13.06l4.47 4.47a.75.75 0 1 0 1.06-1.06L13.06 12l4.47-4.47a.75.75 0 0 0 0-1.06z"/></svg>
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="flex items-center justify-center h-8 w-8 rounded-full bg-white text-[#3C4228] hover:bg-[#E1E5A8] transition">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.37-1.54 2.82-1.54 3.01 0 3.57 1.98 3.57 4.56v5.62zm0 0"/></svg>
+              </a>
+            </div>
           </div>
-          <div class="flex-1">
+          <div class="flex-1 text-center sm:text-left">
             <h3 class="text-2xl font-bold font-chivo text-white mb-3">Chantle Swichkow</h3>
-            <p class="text-gray-300 font-chivo text-sm mb-4">Scientist</p>
-            <p class="text-gray-200 font-chivo text-sm leading-relaxed">
+            <p class="text-gray-300 font-chivo text-sm mb-4"><span class="italic font-normal">Scientist</span></p>
+            <p class="text-gray-200 font-chivo text-xs leading-relaxed">
               Brief bio or description of their work and expertise in fermentation science.
             </p>
           </div>
         </div>
       </div>
-
       <!-- Matthew Schertler -->
-      <div class="bg-[#3C4228] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow h-64">
-        <div class="flex items-start h-full">
-          <div class="flex-shrink-0 mr-6">
+      <div class="bg-[#3C4228] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow h-auto min-h-[18rem]">
+        <div class="flex flex-col sm:flex-row items-center sm:items-start h-full">
+          <div class="flex-shrink-0 mr-0 sm:mr-6 flex flex-col items-center mb-4 sm:mb-0">
             <img src="/img/headshots/matthew-schertler.png" alt="Matthew Schertler" class="w-32 h-32 rounded-full object-cover" />
+            <div class="flex gap-2 mt-3">
+              <a href="mailto:matthew@microcosmfoods.com" target="_blank" rel="noopener" aria-label="Email" class="flex items-center justify-center h-8 w-8 rounded-full bg-white text-[#3C4228] hover:bg-[#E1E5A8] transition">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+              </a>
+              <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X" class="flex items-center justify-center h-8 w-8 rounded-full bg-white text-[#3C4228] hover:bg-[#E1E5A8] transition">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.53 6.47a.75.75 0 0 0-1.06 0L12 10.94 7.53 6.47A.75.75 0 1 0 6.47 7.53L10.94 12l-4.47 4.47a.75.75 0 1 0 1.06 1.06L12 13.06l4.47 4.47a.75.75 0 1 0 1.06-1.06L13.06 12l4.47-4.47a.75.75 0 0 0 0-1.06z"/></svg>
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="flex items-center justify-center h-8 w-8 rounded-full bg-white text-[#3C4228] hover:bg-[#E1E5A8] transition">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.37-1.54 2.82-1.54 3.01 0 3.57 1.98 3.57 4.56v5.62zm0 0"/></svg>
+              </a>
+            </div>
           </div>
-          <div class="flex-1">
+          <div class="flex-1 text-center sm:text-left">
             <h3 class="text-2xl font-bold font-chivo text-white mb-3">Matthew Schertler</h3>
-            <p class="text-gray-300 font-chivo text-sm mb-4">Scientist</p>
-            <p class="text-gray-200 font-chivo text-sm leading-relaxed">
+            <p class="text-gray-300 font-chivo text-sm mb-4"><span class="italic font-normal">Scientist</span></p>
+            <p class="text-gray-200 font-chivo text-xs leading-relaxed">
               Brief bio or description of their work and expertise in fermentation science.
             </p>
           </div>
         </div>
       </div>
-
       <!-- Elizabeth McDaniel -->
-      <div class="bg-[#3C4228] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow h-64">
-        <div class="flex items-start h-full">
-          <div class="flex-shrink-0 mr-6">
+      <div class="bg-[#3C4228] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow h-auto min-h-[18rem]">
+        <div class="flex flex-col sm:flex-row items-center sm:items-start h-full">
+          <div class="flex-shrink-0 mr-0 sm:mr-6 flex flex-col items-center mb-4 sm:mb-0">
             <img src="/img/headshots/elizabeth-mcdaniel.png" alt="Elizabeth McDaniel" class="w-32 h-32 rounded-full object-cover" />
+            <div class="flex gap-2 mt-3">
+              <a href="mailto:elizabeth@microcosmfoods.com" target="_blank" rel="noopener" aria-label="Email" class="flex items-center justify-center h-8 w-8 rounded-full bg-white text-[#3C4228] hover:bg-[#E1E5A8] transition">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+              </a>
+              <a href="https://x.com/lizilla93" target="_blank" rel="noopener" aria-label="X" class="flex items-center justify-center h-8 w-8 rounded-full bg-white text-[#3C4228] hover:bg-[#E1E5A8] transition">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.53 6.47a.75.75 0 0 0-1.06 0L12 10.94 7.53 6.47A.75.75 0 1 0 6.47 7.53L10.94 12l-4.47 4.47a.75.75 0 1 0 1.06 1.06L12 13.06l4.47 4.47a.75.75 0 1 0 1.06-1.06L13.06 12l4.47-4.47a.75.75 0 0 0 0-1.06z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/elizabeth-mcdaniel-228012a0/" target="_blank" rel="noopener" aria-label="LinkedIn" class="flex items-center justify-center h-8 w-8 rounded-full bg-white text-[#3C4228] hover:bg-[#E1E5A8] transition">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.37-1.54 2.82-1.54 3.01 0 3.57 1.98 3.57 4.56v5.62zm0 0"/></svg>
+              </a>
+            </div>
           </div>
-          <div class="flex-1">
+          <div class="flex-1 text-center sm:text-left">
             <h3 class="text-2xl font-bold font-chivo text-white mb-3">Elizabeth McDaniel</h3>
-            <p class="text-gray-300 font-chivo text-sm mb-4">Scientist</p>
-            <p class="text-gray-200 font-chivo text-sm leading-relaxed">
+            <p class="text-gray-300 font-chivo text-sm mb-4"><span class="italic font-normal">Scientist</span></p>
+            <p class="text-gray-200 font-chivo text-xs leading-relaxed">
               Brief bio or description of their work and expertise in fermentation science.
             </p>
           </div>
