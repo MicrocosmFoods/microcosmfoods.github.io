@@ -3,10 +3,10 @@ const { title, text, imgSrc } = Astro.props;
 ---
 
 <section
-  class="bg-[#F6F4EA] bg-cover bg-center min-h-[60vh] md:min-h-[700px] h-auto flex items-start justify-start relative"
+  class="bg-[#F6F4EA] bg-cover bg-center min-h-[60vh] md:min-h-[700px] h-auto flex items-center justify-center relative"
   style={`background-image: url(${imgSrc}); background-size: cover; background-repeat: no-repeat;`}
 >
-  <div class="pt-12 pl-8 sm:pt-20 sm:pl-16 w-full max-w-screen-xl">
+  <div class="w-full max-w-screen-xl text-center -mt-20">
     <slot />
   </div>
 </section>
