@@ -6,6 +6,9 @@ export default {
 			fontFamily: {
 				chivo: ['Chivo', 'sans-serif'],
 			},
+			colors: {
+				'brand-green': '#3C4228',
+			},
 		},
 	},
 	plugins: [],

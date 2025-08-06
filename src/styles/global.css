@@ -1,5 +1,5 @@
 html {
-  min-width: 550px;
+  /* Remove fixed min-width for better mobile experience */
 }
 
 /* Remove default margins and ensure sections connect seamlessly */

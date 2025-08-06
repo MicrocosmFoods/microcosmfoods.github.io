@@ -4,42 +4,42 @@ const { id, title, text, imgSrc } = Astro.props;
 
 <section
   id={id}
-  class="bg-[#F6F4EA] px-4 py-8 md:py-16 min-h-[60vh] md:min-h-[700px] h-auto flex items-center"
+  class="bg-[#F6F4EA] px-4 sm:px-6 py-12 sm:py-16 md:py-20 min-h-screen sm:min-h-[80vh] md:min-h-[700px] h-auto flex items-center"
 >
   <div class="mx-auto max-w-screen-xl w-full">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-      <!-- Left side - Figure and connecting text -->
-      <div class="order-1 lg:order-1 space-y-6">
-        <p class="text-2xl md:text-3xl text-gray-800 font-bold font-chivo leading-relaxed">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start">
+      <!-- Left side - Mission header, connecting text, and image -->
+      <div class="order-1 lg:order-1 space-y-6 sm:space-y-8">
+        <h2 class="text-3xl sm:text-4xl lg:text-4xl font-chivo text-left" style="font-weight: 600; color: #3C4228;">Our Mission</h2>
+        <p class="text-xl sm:text-xl md:text-2xl font-chivo leading-relaxed text-left" style="color: #3C4228;">
           Connecting fermented foods, microbes, and their metabolites to health benefits.
         </p>
         <img 
           src={imgSrc} 
           alt="Science illustration" 
-          class="w-full h-auto max-w-2xl mx-auto"
+          class="w-full h-auto max-w-2xl"
         />
       </div>
       
-      <!-- Right side - Content -->
-      <div class="order-2 lg:order-2 space-y-8">
+      <!-- Right side - Mission content -->
+      <div class="order-2 lg:order-2 space-y-8 sm:space-y-10 lg:space-y-12 text-left flex flex-col justify-center">
         <!-- Mission -->
         <div class="space-y-4">
-          <h2 class="text-3xl font-bold font-chivo text-gray-800">Our Mission</h2>
-          <p class="text-xl font-chivo text-gray-800 mb-4 italic">
+          <p class="text-lg sm:text-xl lg:text-xl font-chivo mb-4 italic text-left" style="color: #3C4228;">
             Making the benefits of fermentation accessible to all
           </p>
-          <p class="text-gray-700 font-chivo leading-relaxed">
-            We’re bridging ancient traditions and modern science to unlock the health potential of fermented foods through research, education, and product innovation.
+          <p class="text-base sm:text-lg font-chivo leading-relaxed text-left" style="color: #3C4228;">
+            We're bridging ancient traditions and modern science to unlock the health potential of fermented foods through research, education, and product innovation.
           </p>
         </div>
         
         <!-- Why Fermentation Matters -->
         <div class="space-y-4">
-          <p class="text-xl font-chivo text-gray-800 mb-4 italic">
+          <p class="text-lg sm:text-xl lg:text-xl font-chivo mb-4 italic text-left" style="color: #3C4228;">
             Microbes have always interacted with our food and our biology
           </p>
-          <p class="text-gray-700 font-chivo leading-relaxed">
-            Fermented foods aren’t just preserved, they’re transformed. From cheese to kimchi, microbes in fermented foods reshape ingredients into more flavorful, digestible, and nutrient-rich forms. Each fermented food has its own unique combination of microbial species and metabolites, a little world, or microcosm. Within these microcosms are myriad bioactive compounds that support health, many yet to be discovered.
+          <p class="text-base sm:text-lg font-chivo leading-relaxed text-left" style="color: #3C4228;">
+            Fermented foods aren't just preserved, they're transformed. From cheese to kimchi, microbes in fermented foods reshape ingredients into more flavorful, digestible, and nutrient-rich forms. Each fermented food has its own unique combination of microbial species and metabolites, a little world, or microcosm. Within these microcosms are myriad bioactive compounds that support health, many yet to be discovered.
           </p>
         </div>
       </div>

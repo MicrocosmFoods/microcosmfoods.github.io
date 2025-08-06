@@ -3,11 +3,54 @@ const { title, text, imgSrc } = Astro.props;
 ---
 
 <section
-  class="bg-[#F6F4EA] bg-cover bg-center bg-no-repeat relative overflow-hidden"
-  style={`background-image: url(${imgSrc}); background-size: cover; background-position: center; min-height: 100vh;`}
+  class="bg-[#F6F4EA] bg-cover bg-center bg-no-repeat relative overflow-hidden hero-section"
+  style={`background-image: url(${imgSrc}); 
+          background-size: cover; 
+          background-position: center top; 
+          min-height: 100vh;
+          background-attachment: scroll;`}
 >
-  <div class="absolute inset-0 flex items-center justify-center px-4 sm:px-6 lg:px-8">
-    <div class="w-full max-w-screen-xl text-center transform -translate-y-8 sm:-translate-y-12">
+  <!-- Responsive background positioning and sizing -->
+  <style>
+    .hero-section {
+      background-image: url('${imgSrc}');
+    }
+    
+    @media (max-width: 768px) {
+      .hero-section {
+        background-position: center center !important;
+        background-size: cover !important;
+        min-height: 100vh !important;
+      }
+    }
+    
+    @media (max-width: 640px) {
+      .hero-section {
+        background-position: center center !important;
+        background-size: cover !important;
+        min-height: 100vh !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-section {
+        background-position: center center !important;
+        background-size: cover !important;
+        min-height: 100vh !important;
+      }
+    }
+    
+    @media (max-width: 320px) {
+      .hero-section {
+        background-position: center center !important;
+        background-size: cover !important;
+        min-height: 100vh !important;
+      }
+    }
+  </style>
+  
+  <div class="absolute inset-0 flex items-center justify-center px-6 sm:px-8 lg:px-8">
+    <div class="w-full max-w-screen-xl text-center transform -translate-y-4 sm:-translate-y-8 md:-translate-y-12">
       <slot />
     </div>
   </div>
