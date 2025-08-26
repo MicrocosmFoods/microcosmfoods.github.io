@@ -10,7 +10,7 @@ const { title, text, imgSrc } = Astro.props;
           min-height: 100vh;
           background-attachment: scroll;`}
 >
-  <!-- Responsive background positioning and sizing -->
+  <!-- Responsive background with alternative banner for mobile -->
   <style>
     .hero-section {
       background-image: url('${imgSrc}');
@@ -18,39 +18,93 @@ const { title, text, imgSrc } = Astro.props;
     
     @media (max-width: 768px) {
       .hero-section {
+        background-image: url('/img/alternative-banner.png') !important;
         background-position: center center !important;
         background-size: cover !important;
         min-height: 100vh !important;
+        height: 100vh !important;
       }
-    }
-    
-    @media (max-width: 640px) {
-      .hero-section {
-        background-position: center center !important;
-        background-size: cover !important;
-        min-height: 100vh !important;
+      
+      .hero-section .text-center {
+        text-align: left !important;
+        font-size: 3.5rem !important;
+        line-height: 1.2 !important;
+        height: 100vh !important;
+        display: flex !important;
+        align-items: center !important;
+        padding: 2rem !important;
+        justify-content: flex-start !important;
+        transform: none !important;
       }
-    }
-    
-    @media (max-width: 480px) {
-      .hero-section {
-        background-position: center center !important;
-        background-size: cover !important;
-        min-height: 100vh !important;
+      
+      .hero-section .mobile-text-container {
+        justify-content: flex-start !important;
+        align-items: center !important;
+        transform: none !important;
+        max-width: none !important;
+        width: 100% !important;
       }
-    }
-    
-    @media (max-width: 320px) {
-      .hero-section {
-        background-position: center center !important;
-        background-size: cover !important;
-        min-height: 100vh !important;
+      
+      .hero-section h1,
+      .hero-section h2,
+      .hero-section h3,
+      .hero-section p,
+      .hero-section span,
+      .hero-section div {
+        font-size: 4rem !important;
+        line-height: 1.1 !important;
+      }
+      
+      /* More specific targeting for the actual h1 content */
+      .hero-section .text-center h1,
+      .hero-section .mobile-text-container h1,
+      .hero-section h1.text-3xl,
+      .hero-section h1.sm\:text-4xl,
+      .hero-section h1.md\:text-5xl,
+      .hero-section h1.lg\:text-6xl {
+        font-size: 8rem !important;
+        line-height: 0.9 !important;
+        font-weight: 700 !important;
+        width: 100% !important;
+        height: 100vh !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        padding: 1rem !important;
+      }
+      
+      /* Target the specific hero-title class */
+      .hero-section .hero-title {
+        font-size: 8rem !important;
+        line-height: 0.9 !important;
+        font-weight: 700 !important;
+        width: 100% !important;
+        height: 100vh !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        padding: 1rem !important;
+      }
+      
+      /* Override all Tailwind text sizing classes for mobile */
+      .hero-section .hero-title.text-3xl,
+      .hero-section .hero-title.sm\:text-4xl,
+      .hero-section .hero-title.md\:text-5xl,
+      .hero-section .hero-title.lg\:text-6xl {
+        font-size: 8rem !important;
+        line-height: 0.9 !important;
+        font-weight: 700 !important;
+      }
+      
+      /* Force override any inline styles */
+      .hero-section .hero-title[style*="line-height"] {
+        line-height: 0.9 !important;
       }
     }
   </style>
   
   <div class="absolute inset-0 flex items-center justify-center px-6 sm:px-8 lg:px-8">
-    <div class="w-full max-w-screen-xl text-center transform -translate-y-4 sm:-translate-y-8 md:-translate-y-12">
+    <div class="w-full max-w-screen-xl text-center sm:text-center transform -translate-y-4 sm:-translate-y-8 md:-translate-y-12 mobile-text-container">
       <slot />
     </div>
   </div>

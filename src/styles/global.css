@@ -18,3 +18,20 @@ main > section {
   margin: 0;
   padding: 0;
 }
+
+/* Mobile hero text styling - override Tailwind responsive sizing */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem !important;
+    line-height: 1.2 !important;
+    font-weight: 400 !important;
+    font-family: 'Chivo', sans-serif !important;
+    width: 100% !important;
+    height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 1rem !important;
+    color: #3C4228 !important;
+  }
+}
